@@ -1,5 +1,7 @@
 # Instructions
-Only compatible with RGBDS 5.2 
+DO NOT use your old crystal 16bit save. The flags for trainers are different somehow and you will crash the game. or something else is broke idk. everything seems to work fine besides OLD SAVES. eg: you can load up an old save but when you cross paths with a trainer you've already fought it'll try to start a battle then crash.  
+
+Only compatible with RGBDS 5.2(VERY IMPORTANT!!)
 
 These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds**](https://github.com/rednex/rgbds), which assembles the source files into a ROM.
 
