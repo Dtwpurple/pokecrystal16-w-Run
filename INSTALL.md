@@ -1,5 +1,5 @@
 # Instructions
-DO NOT use your old crystal 16bit save. The flags for trainers are different somehow and you will crash the game. or something else is broke idk. everything seems to work fine besides OLD SAVES. eg: you can load up an old save but when you cross paths with a trainer you've already fought it'll try to start a battle then crash.  
+DO NOT RESUME A OLD SAVE WHEN IN FRONT OF A BEATEN TRAINER. if you dont heed this warning you will experince a crash. Dont worry just reload your old save with the old crystal 16bit rom and move out of line of sight. Then find a new trainer you can fight. Save before you fight them. Reload the save on the new rom and fight the new trainer. This should fix the issue with the last trainer you battled not being flagged and running the battle sequence again. 
 
 Only compatible with RGBDS 5.2(VERY IMPORTANT!!)
 
