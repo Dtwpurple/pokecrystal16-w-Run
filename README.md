@@ -3,6 +3,7 @@
 This repository contains a modified Pokémon Crystal game, updated to handle 16-bit indexes. Based on https://github.com/aaaaaa123456789/pokecrystal16. See https://github.com/pret/pokecrystal for more info on the pokecrystal disassembly.
 
 Features in this version include:
+- Hold B to run.
 - Many Pokémon from later generations, including regional forms
 - Several Pokémon from the Gold and Silver beta
 - Altered trainer parties and wild encounters to include newly added Pokémon and provide a smoother and slightly more challenging level curve
