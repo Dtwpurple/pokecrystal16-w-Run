@@ -1,5 +1,5 @@
 # Instructions
-
+Only compatible with RGBDS 5.2 
 These instructions explain how to set up the tools required to build **pokecrystal**, including [**rgbds**](https://github.com/rednex/rgbds), which assembles the source files into a ROM.
 
 If you run into trouble, ask for help on IRC or Discord (see [README.md](README.md)).
