@@ -698,10 +698,13 @@ DayCare_InitBreeding:
 	ld [hli], a
 	dec b
 	jr nz, .loop2
-	ld hl, DITTO
-	call GetPokemonIDFromIndex
-	ld b, a              ; Assuming high byte is in B or set by call
-	ld c, a              ; Assuming low byte is in C or set by call
+
+	; Properly load 16-bit Ditto ID into BC
+	ld a, LOW(DITTO)
+	ld c, a
+	ld a, HIGH(DITTO)
+	ld b, a
+
 	ld hl, wEggMonDVs
 	call Random
 	ld [hli], a
@@ -713,25 +716,22 @@ DayCare_InitBreeding:
 	
 	; 16-bit check for BreedMon1
 	ld a, [wBreedMon1Species]
-	cp c                 ; Compare low byte
-	jr nz, .+6           ; Skip if low byte doesn't match
+	cp c
+	jr nz, @+6           ; Jump exactly 5 bytes to skip high-byte check
 	ld a, [wBreedMon1Species + 1]
-	cp b                 ; Compare high byte
-	jr z, .GotDVs        ; If both match, it's Ditto
-	
+	cp b
+	jr z, .GotDVs
+
 	ld de, wBreedMon2DVs
 	
 	; 16-bit check for BreedMon2
 	ld a, [wBreedMon2Species]
-	cp c                 ; Compare low byte
-	jr nz, .+6           ; Skip if low byte doesn't match
+	cp c
+	jr nz, @+6           ; Jump exactly 5 bytes to skip high-byte check
 	ld a, [wBreedMon2Species + 1]
-	cp b                 ; Compare high byte
-	jr z, .GotDVs        ; If both match, it's Ditto
-	ld de, wBreedMon2DVs
-	ld a, [wBreedMon2Species]
 	cp b
 	jr z, .GotDVs
+
 	ld a, TEMPMON
 	ld [wMonType], a
 	push hl
