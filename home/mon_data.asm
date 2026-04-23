@@ -17,6 +17,7 @@ GetBaseData::
 	cp EGG
 	jr z, .egg
 
+.get_base_data
 ; Get BaseData
 	call GetPokemonIndexFromID
 	ld b, h
