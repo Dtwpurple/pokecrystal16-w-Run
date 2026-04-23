@@ -7,6 +7,13 @@ GetBaseData::
 
 ; Egg doesn't have BaseData
 	ld a, [wCurSpecies]
+	ld l, a
+	ld a, [wCurSpecies + 1]
+	ld h, a
+	ld a, h
+	or a
+	jr nz, .get_base_data ; High byte != 0 means it's not an egg
+	ld a, l
 	cp EGG
 	jr z, .egg
 
@@ -17,7 +24,6 @@ GetBaseData::
 	ld a, BANK(BaseData)
 	ld hl, BaseData
 	call LoadIndirectPointer
-	; jr z, <some error handler>
 	rst Bankswitch
 	ld de, wCurBaseData
 	ld bc, BASE_DATA_SIZE
@@ -46,6 +52,8 @@ GetBaseData::
 ; Replace Pokedex # with species
 	ld a, [wCurSpecies]
 	ld [wBaseSpecies], a
+	ld a, [wCurSpecies + 1]
+	ld [wBaseSpecies + 1], a
 
 	pop af
 	rst Bankswitch
