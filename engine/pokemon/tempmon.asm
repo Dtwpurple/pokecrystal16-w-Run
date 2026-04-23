@@ -5,8 +5,19 @@ CopyMonToTempMon:
 	ld a, [wCurPartyMon]
 	ld e, a
 	call GetMonSpecies
+	ld a, [wCurPartyMon]
+	ld e, a
+	call GetMonSpecies
+    
 	ld a, [wCurPartySpecies]
 	ld [wCurSpecies], a
+	push hl             ; hl was set by GetMonSpecies to point to the Mon
+	ld bc, 33           ; Offset to the "Unused" byte (High Byte)
+	add hl, bc
+	ld a, [hl]          ; Load the High Byte
+	ld [wCurSpecies + 1], a
+	pop hl              ; Restore hl to the start of the struct
+    
 	call GetBaseData
 
 	ld a, [wMonType]
