@@ -432,7 +432,7 @@ DayCareManOutside:
 	jr c, .Declined
 	ld a, [wPartyCount]
 	cp PARTY_LENGTH
-	jr nc, .PartyFull
+	jp nc, .PartyFull
 	call DayCare_GiveEgg
 	ld hl, wDayCareMan
 	res DAYCAREMAN_HAS_EGG_F, [hl]
