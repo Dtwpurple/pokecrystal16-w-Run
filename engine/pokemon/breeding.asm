@@ -2,8 +2,14 @@ CheckBreedmonCompatibility:
 	call .CheckBreedingGroupCompatibility
 	ld c, $0
 	jp nc, .done
+
 	ld a, [wBreedMon1Species]
 	ld [wCurPartySpecies], a
+	ld [wCurSpecies], a          ; Keep both in sync
+	ld a, [wBreedMon1Species + 1]
+	ld [wCurPartySpecies + 1], a
+	ld [wCurSpecies + 1], a
+
 	ld a, [wBreedMon1DVs]
 	ld [wTempMonDVs], a
 	ld a, [wBreedMon1DVs + 1]
@@ -20,6 +26,11 @@ CheckBreedmonCompatibility:
 	push bc
 	ld a, [wBreedMon2Species]
 	ld [wCurPartySpecies], a
+	ld [wCurSpecies], a
+	ld a, [wBreedMon2Species + 1]
+	ld [wCurPartySpecies + 1], a
+	ld [wCurSpecies + 1], a
+
 	ld a, [wBreedMon2DVs]
 	ld [wTempMonDVs], a
 	ld a, [wBreedMon2DVs + 1]
