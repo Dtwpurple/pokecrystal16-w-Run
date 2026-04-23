@@ -617,16 +617,16 @@ DayCare_InitBreeding:
 	ld hl, wBreedMon1Species
 	ld a, [hli]               ; Load low byte
 	cp c                      ; Compare against Ditto low byte
-	jr nz, .+6                ; Skip next 6 bytes if not Ditto
+	jr nz, @+6                ; Skip next 6 bytes if not Ditto
 	ld a, [hl]                ; Load high byte
 	cp b                      ; Compare against Ditto high byte
 	jr z, .LoadWhichBreedmonIsTheMother ; Match!
-	-	ld a, [wBreedMon2Species]
+	ld a, [wBreedMon2Species]
 	cp c
 	ld hl, wBreedMon2Species
 	ld a, [hli]
 	cp c
-	jr nz, .+6
+	jr nz, @+6
 	ld a, [hl]
 	cp b
 	jr z, .LoadWhichBreedmonIsTheMother
