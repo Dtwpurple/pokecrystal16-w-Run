@@ -1397,7 +1397,7 @@ wcf5d:: dw
 
 wMonType:: db ; cf5f
 
-wCurSpecies:: db ; cf60
+wCurSpecies:: dw ; cf60
 
 wNamedObjectTypeBuffer:: db
 
