@@ -927,10 +927,15 @@ RetrieveBreedmon:
 	dec a
 	ld [wCurPartyMon], a
 	farcall HealPartyMon
+	; Set up 16-bit ID for CalcExpAtLevel
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
+	ld a, [wCurPartySpecies + 1]
+	ld [wCurSpecies + 1], a
 	ld d, MAX_LEVEL
 	callfar CalcExpAtLevel
-	pop bc
-	ld hl, MON_EXP + 2
+	pop bc             ; BC is now the pointer to the start of the Mon's struct
+	ld hl, MON_EXP + 2 ; Point to the end of the 3-byte EXP field
 	add hl, bc
 	ldh a, [hMultiplicand]
 	ld b, a
