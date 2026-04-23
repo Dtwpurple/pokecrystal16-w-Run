@@ -493,7 +493,7 @@ DayCare_GiveEgg:
 	ld hl, wPartyCount
 	ld a, [hl]
 	cp PARTY_LENGTH
-	jr nc, .PartyFull
+	jp nc, .PartyFull
 	inc a
 	ld [hl], a
 
