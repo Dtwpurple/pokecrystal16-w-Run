@@ -174,7 +174,11 @@ DayCareAskDepositPokemon:
 DayCare_DepositPokemonText:
 	ld a, DAYCARETEXT_DEPOSIT
 	call PrintDayCareText
-	ld a, [wCurPartySpecies]
+-	ld a, [wCurPartySpecies]
++	ld a, [wCurPartySpecies]
++	ld l, a
++	ld a, [wCurPartySpecies + 1]
++	ld h, a                  ; HL now has the 16-bit ID
 	call PlayMonCry
 	ld a, DAYCARETEXT_COME_BACK_LATER
 	call PrintDayCareText
