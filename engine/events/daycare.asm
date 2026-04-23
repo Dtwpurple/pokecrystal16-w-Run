@@ -535,15 +535,15 @@ DayCare_GiveEgg:
 	ld bc, wEggMonEnd - wEggMon
 	call CopyBytes
     
-	; --- MASKING PATCH (Store High Byte in Party) ---
-	; After CopyBytes, de still points to the start of the new Party Mon
+	; --- UPDATED MASKING PATCH ---
+	; We use Offset 17 (Padding) because it exists in both Box and Party
 	push de
-	ld hl, 33         ; Offset to Unused byte
+	ld hl, 17         ; Offset to Padding 
 	add hl, de
 	ld a, [wCurSpecies + 1]
-	ld [hl], a        ; Store High Byte safely at Offset 33
+	ld [hl], a        ; Store High Byte safely
 	pop de
-	; ------------------------------------------------
+	; -----------------------------
 
 	call GetBaseData
 	ld a, [wPartyCount]
