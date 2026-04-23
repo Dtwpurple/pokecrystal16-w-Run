@@ -593,15 +593,26 @@ DayCare_InitBreeding:
 	ld [wMonType], a
 	ld hl, DITTO
 	call GetPokemonIDFromIndex
-	ld c, a
-	ld a, [wBreedMon1Species]
-	cp c
-	ld a, $1
-	jr z, .LoadWhichBreedmonIsTheMother
-	ld a, [wBreedMon2Species]
-	cp c
-	ld a, $0
-	jr z, .LoadWhichBreedmonIsTheMother
+	; BC now holds the 16-bit Ditto ID
+-	ld c, a
+-	ld a, [wBreedMon1Species]
+-	cp c
++	ld hl, wBreedMon1Species
++	ld a, [hli]               ; Load low byte
++	cp c                      ; Compare against Ditto low byte
++	jr nz, .+6                ; Skip next 6 bytes if not Ditto
++	ld a, [hl]                ; Load high byte
++	cp b                      ; Compare against Ditto high byte
++	jr z, .LoadWhichBreedmonIsTheMother ; Match!
+	-	ld a, [wBreedMon2Species]
+-	cp c
++	ld hl, wBreedMon2Species
++	ld a, [hli]
++	cp c
++	jr nz, .+6
++	ld a, [hl]
++	cp b
++	jr z, .LoadWhichBreedmonIsTheMother
 	farcall GetGender
 	ld a, $0
 	jr z, .LoadWhichBreedmonIsTheMother
@@ -615,15 +626,23 @@ DayCare_InitBreeding:
 	ld a, [wBreedMon2Species]
 
 .GotMother:
-	ld [wCurPartySpecies], a
+-	ld [wCurPartySpecies], a
++	ld [wCurPartySpecies], a
++	ld a, [wCurSpecies + 1]      ; Get high byte of Mother
++	ld [wCurPartySpecies + 1], a
 	callfar GetLowestEvolutionStage
-	; ld a, EGG_LEVEL
-	ld a, $1
-	ld [wCurPartyLevel], a
+	; ...
 	call Daycare_CheckAlternateOffspring
-	ld [wCurPartySpecies], a
-	ld [wCurSpecies], a
-	ld [wEggMonSpecies], a
+-	ld [wCurPartySpecies], a
+-	ld [wCurSpecies], a
+-	ld [wEggMonSpecies], a
++	ld [wCurPartySpecies], a
++	ld [wCurSpecies], a
++	ld [wEggMonSpecies], a
++	ld a, [wCurSpecies + 1]      ; Store 16-bit high byte for all three
++	ld [wCurPartySpecies + 1], a
++	ld [wCurSpecies + 1], a
++	ld [wEggMonSpecies + 1], a
 
 	call GetBaseData
 	ld hl, wEggNick
@@ -664,7 +683,8 @@ DayCare_InitBreeding:
 	jr nz, .loop2
 	ld hl, DITTO
 	call GetPokemonIDFromIndex
-	ld b, a
+	ld b, a              ; Assuming high byte is in B or set by call
+	ld c, a              ; Assuming low byte is in C or set by call
 	ld hl, wEggMonDVs
 	call Random
 	ld [hli], a
@@ -673,9 +693,24 @@ DayCare_InitBreeding:
 	ld [hld], a
 	ld [wTempMonDVs + 1], a
 	ld de, wBreedMon1DVs
+	
+	; 16-bit check for BreedMon1
 	ld a, [wBreedMon1Species]
-	cp b
-	jr z, .GotDVs
+	cp c                 ; Compare low byte
+	jr nz, .+6           ; Skip if low byte doesn't match
+	ld a, [wBreedMon1Species + 1]
+	cp b                 ; Compare high byte
+	jr z, .GotDVs        ; If both match, it's Ditto
+	
+	ld de, wBreedMon2DVs
+	
+	; 16-bit check for BreedMon2
+	ld a, [wBreedMon2Species]
+	cp c                 ; Compare low byte
+	jr nz, .+6           ; Skip if low byte doesn't match
+	ld a, [wBreedMon2Species + 1]
+	cp b                 ; Compare high byte
+	jr z, .GotDVs        ; If both match, it's Ditto
 	ld de, wBreedMon2DVs
 	ld a, [wBreedMon2Species]
 	cp b
