@@ -793,15 +793,15 @@ RestorePPOfDepositedPokemon:
 RetrieveMonFromDayCareMan:
 	ld a, [wBreedMon1Species]
 	ld [wCurPartySpecies], a
-+	ld a, [wBreedMon1Species + 1]
-+	ld [wCurPartySpecies + 1], a
+	ld a, [wBreedMon1Species + 1]
+	ld [wCurPartySpecies + 1], a
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-+	ld a, [wBreedMon1Species]
-+	ld c, a
-+	ld a, [wBreedMon1Species + 1]
-+	ld b, a
+	ld a, [wBreedMon1Species]
+	ld c, a
+	ld a, [wBreedMon1Species + 1]
+	ld b, a
 	call GetBreedMon1LevelGrowth
 	ld a, b
 	ld [wd002], a
@@ -814,15 +814,15 @@ RetrieveMonFromDayCareMan:
 RetrieveMonFromDayCareLady:
 	ld a, [wBreedMon2Species]
 	ld [wCurPartySpecies], a
-+	ld a, [wBreedMon2Species + 1]
-+	ld [wCurPartySpecies + 1], a
+	ld a, [wBreedMon2Species + 1]
+	ld [wCurPartySpecies + 1], a
 	ld de, SFX_TRANSACTION
 	call PlaySFX
 	call WaitSFX
-+	ld a, [wBreedMon2Species]
-+	ld c, a
-+	ld a, [wBreedMon2Species + 1]
-+	ld b, a
+	ld a, [wBreedMon2Species]
+	ld c, a
+	ld a, [wBreedMon2Species + 1]
+	ld b, a
 	call GetBreedMon2LevelGrowth
 	ld a, b
 	ld [wd002], a
@@ -846,7 +846,7 @@ RetrieveBreedmon:
 	ld c, a
 	ld b, 0
 	add hl, bc
-+	add hl, bc        ; Offset for 16-bit wPartySpecies
+	add hl, bc        ; Offset for 16-bit wPartySpecies
 	ld a, [wPokemonWithdrawDepositParameter]
 	and a
 	ld a, [wBreedMon1Species]
@@ -857,22 +857,22 @@ RetrieveBreedmon:
 
 .okay
 	ld [hli], a
-+	push af
-+	ld a, [wPokemonWithdrawDepositParameter]
-+	and a
-+	ld a, [wBreedMon1Species + 1]
-+	jr z, .got_high
-+	ld a, [wBreedMon2Species + 1]
-+.got_high
-+	ld [hli], a
-+	ld [wCurSpecies + 1], a
-+	pop af
+	push af
+	ld a, [wPokemonWithdrawDepositParameter]
+	and a
+	ld a, [wBreedMon1Species + 1]
+	jr z, .got_high
+	ld a, [wBreedMon2Species + 1]
+.got_high
+	ld [hli], a
+	ld [wCurSpecies + 1], a
+	pop af
 	ld [wCurSpecies], a
--	ld a, $ff
--	ld [hl], a
-+	ld a, $ff         ; 16-bit terminator
-+	ld [hli], a
-+	ld [hl], a
+	ld a, $ff
+	ld [hl], a
+	ld a, $ff         ; 16-bit terminator
+	ld [hli], a
+	ld [hl], a
 	ld hl, wPartyMonNicknames
 	ld a, [wPartyCount]
 	dec a
@@ -994,20 +994,20 @@ DepositBreedmon:
 	call SkipNames
 	call CopyBytes
 	ld a, [wCurPartyMon]
--	ld hl, wPartyMon1Species
-+	ld hl, wPartyMon1Species ; Assuming this is the 16-bit array
-+	ld b, 0
-+	ld c, a
-+	add hl, bc
-+	add hl, bc              ; Correct offset for 16-bit
-+	ld a, [hli]
-+	ld [de], a              ; Copy Low Byte
-+	inc de
-+	ld a, [hl]
-+	ld [de], a              ; Copy High Byte
-+	dec de
-+	ld a, [wCurPartyMon]
-+	ld hl, wPartyMon1       ; Point to stats/struct
+	ld hl, wPartyMon1Species
+	ld hl, wPartyMon1Species ; Assuming this is the 16-bit array
+	ld b, 0
+	ld c, a
+	add hl, bc
+	add hl, bc              ; Correct offset for 16-bit
+	ld a, [hli]
+	ld [de], a              ; Copy Low Byte
+	inc de
+	ld a, [hl]
+	ld [de], a              ; Copy High Byte
+	dec de
+	ld a, [wCurPartyMon]
+	ld hl, wPartyMon1       ; Point to stats/struct
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call AddNTimes
 	ld bc, BOXMON_STRUCT_LENGTH
