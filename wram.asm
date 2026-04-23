@@ -1401,7 +1401,6 @@ wCurSpecies:: dw ; cf60
 
 wNamedObjectTypeBuffer:: db
 
-	ds 1
 
 wJumptableIndex::
 wBattleTowerBattleEnded::
