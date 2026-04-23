@@ -77,12 +77,22 @@ DayCareLady:
 	ret
 
 .AskWithdrawMon:
+	; Load 16-bit species into BC for GetBreedMon2LevelGrowth
+	ld a, [wBreedMon2Species]
+	ld c, a
+	ld a, [wBreedMon2Species + 1]
+	ld b, a
 	farcall GetBreedMon2LevelGrowth
 	ld hl, wBreedMon2Nick
 	call GetPriceToRetrieveBreedmon
 	call DayCare_AskWithdrawBreedMon
 	jr c, .print_text
 	farcall RetrieveMonFromDayCareLady
+	; Ensure 16-bit ID is in wCurPartySpecies for the cry/text
+	ld a, [wBreedMon2Species]
+	ld [wCurPartySpecies], a
+	ld a, [wBreedMon2Species + 1]
+	ld [wCurPartySpecies + 1], a
 	call DayCare_GetBackMonForMoney
 	ld hl, wDayCareLady
 	res DAYCARELADY_HAS_MON_F, [hl]
@@ -237,6 +247,9 @@ DayCare_GetBackMonForMoney:
 	ld a, DAYCARETEXT_WITHDRAW
 	call PrintDayCareText
 	ld a, [wCurPartySpecies]
+	ld l, a
+	ld a, [wCurPartySpecies + 1]
+	ld h, a                  ; Load full 16-bit ID into HL for the cry
 	call PlayMonCry
 	ld a, DAYCARETEXT_GOT_BACK
 	call PrintDayCareText
