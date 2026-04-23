@@ -121,6 +121,8 @@ CheckBreedmonCompatibility:
 ; they are not compatible.
 	ld a, [wBreedMon2Species]
 	ld [wCurSpecies], a
++	ld a, [wBreedMon2Species + 1]
++	ld [wCurSpecies + 1], a
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
@@ -128,6 +130,8 @@ CheckBreedmonCompatibility:
 
 	ld a, [wBreedMon1Species]
 	ld [wCurSpecies], a
++	ld a, [wBreedMon1Species + 1]
++	ld [wCurSpecies + 1], a
 	call GetBaseData
 	ld a, [wBaseEggGroups]
 	cp EGG_NONE * $11
