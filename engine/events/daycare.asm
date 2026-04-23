@@ -502,9 +502,15 @@ DayCare_GiveEgg:
 	add hl, bc
 	ld a, EGG
 	ld [hli], a
+    
+	; --- 16-bit Species Patch ---
 	ld a, [wEggMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
+	ld a, [wEggMonSpecies + 1] ; Grab the High Byte
+	ld [wCurSpecies + 1], a    ; Ensure GetBaseData sees it
+	; ----------------------------
+
 	ld a, -1
 	ld [hl], a
 
@@ -523,9 +529,21 @@ DayCare_GiveEgg:
 	ld hl, wPartyMon1
 	ld bc, PARTYMON_STRUCT_LENGTH
 	call DayCare_GetCurrentPartyMember
+	ld d, h
+	ld e, l
 	ld hl, wEggMon
 	ld bc, wEggMonEnd - wEggMon
 	call CopyBytes
+    
+	; --- MASKING PATCH (Store High Byte in Party) ---
+	; After CopyBytes, de still points to the start of the new Party Mon
+	push de
+	ld hl, 33         ; Offset to Unused byte
+	add hl, de
+	ld a, [wCurSpecies + 1]
+	ld [hl], a        ; Store High Byte safely at Offset 33
+	pop de
+	; ------------------------------------------------
 
 	call GetBaseData
 	ld a, [wPartyCount]
