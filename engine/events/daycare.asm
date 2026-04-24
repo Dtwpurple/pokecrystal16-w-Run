@@ -503,14 +503,9 @@ DayCare_GiveEgg:
 	ld a, EGG
 	ld [hli], a
     
-	; --- 16-bit Species Patch ---
 	ld a, [wEggMonSpecies]
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
-	ld a, [wEggMonSpecies + 1] ; Grab the High Byte
-	ld [wCurSpecies + 1], a    ; Ensure GetBaseData sees it
-	; ----------------------------
-
 	ld a, -1
 	ld [hl], a
 
@@ -535,15 +530,9 @@ DayCare_GiveEgg:
 	ld bc, wEggMonEnd - wEggMon
 	call CopyBytes
     
-	; --- UPDATED MASKING PATCH ---
-	; We use Offset 17 (Padding) because it exists in both Box and Party
-	push de
-	ld hl, 17         ; Offset to Padding 
-	add hl, de
-	ld a, [wCurSpecies + 1]
-	ld [hl], a        ; Store High Byte safely
-	pop de
-	; -----------------------------
+	; ---------------------------------------------------------
+	; ALL MASKING AND HIGH-BYTE LOGIC HAS BEEN DELETED FROM HERE
+	; ---------------------------------------------------------
 
 	call GetBaseData
 	ld a, [wPartyCount]
