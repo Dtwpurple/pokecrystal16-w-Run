@@ -1,11 +1,19 @@
 CopyMonToTempMon:
-    ld a, [wCurPartyMon]
-    ld e, a
-    call GetMonSpecies
-    ld a, [wCurPartySpecies]
-    ld [wCurSpecies], a
-    ; Remove the "High Byte" reconstruction logic entirely.
-    call GetBaseData
+; gets the BaseData of a mon
+; and copies the party_struct to wTempMon
+
+	ld a, [wCurPartyMon]
+	ld e, e
+	call GetMonSpecies
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
+    
+	; --- THE EXACT PATCH ---
+	xor a
+	ld [wCurSpecies + 1], a
+	; -----------------------
+    
+	call GetBaseData
 
 	ld a, [wMonType]
 	ld hl, wPartyMon1Species
