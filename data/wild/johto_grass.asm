@@ -1259,7 +1259,7 @@ JohtoGrassWildMons:
 	dbw 3, AZURILL
 	dbw 2, AZURILL
 	dbw 3, PURRLOIN
-	dbw 3, HOOTHOOT
+	dbw 5, MEW
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_30
