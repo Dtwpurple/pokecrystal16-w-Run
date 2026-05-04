@@ -406,9 +406,9 @@ PokemonCries::
 	mon_cry CRY_RAIKOU,       95,  208 ; BAGON
 	mon_cry CRY_SPINARAK,   -475,  336 ; SHELGON
 	mon_cry CRY_RAIKOU,     -256,  384 ; SALAMENCE
-	; mon_cry CRY_BULBASAUR,   128,  129  ; BELDUM
-	; mon_cry CRY_BULBASAUR,   128,  129  ; METANG
-	; mon_cry CRY_BULBASAUR,   128,  129  ; METAGROSS
+	mon_cry CRY_BULBASAUR,   128,  129  ; BELDUM
+	mon_cry CRY_BULBASAUR,   128,  129  ; METANG
+	mon_cry CRY_BULBASAUR,   128,  129  ; METAGROSS
 	; mon_cry CRY_BULBASAUR,   128,  129  ; REGIROCK
 	; mon_cry CRY_BULBASAUR,   128,  129  ; REGICE
 	; mon_cry CRY_BULBASAUR,   128,  129  ; REGISTEEL
