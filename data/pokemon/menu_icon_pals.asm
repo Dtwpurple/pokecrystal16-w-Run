@@ -402,9 +402,9 @@ MonMenuIconPals:
 	icon_pals BLUE,   GREEN  ; BAGON
 	icon_pals GRAY,   GREEN  ; SHELGON
 	icon_pals BLUE,   GREEN  ; SALAMENCE
-	; icon_pals BLUE,   GRAY   ; BELDUM
-	; icon_pals BLUE,   GRAY   ; METANG
-	; icon_pals BLUE,   GRAY   ; METAGROSS
+	icon_pals BLUE,   GRAY   ; BELDUM
+	icon_pals BLUE,   GRAY   ; METANG
+	icon_pals BLUE,   GRAY   ; METAGROSS
 	; icon_pals BROWN,  RED    ; REGIROCK
 	; icon_pals BLUE,   BLUE   ; REGICE
 	; icon_pals GRAY,   GREEN  ; REGISTEEL
