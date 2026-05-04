@@ -239,7 +239,7 @@ JohtoWaterWildMons:
 	dbw 15, FRILLISH
 	dbw 20, MANTYKE
 	dbw 20, PYUKUMUKU
-	dbw 20, PYUKUMUKU
+	dbw 18, STARYU
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_41 ; FRILLISH, MANTYKE, WINGULL, WAILMER, MOLANCORA, SKRELP
@@ -258,7 +258,7 @@ JohtoWaterWildMons:
 	dbw 15, LOTAD
 	dbw 20, CARVANHA
 	dbw 15, BASCULIN_B
-	dbw 15, GOLDEEN
+	dbw 25, SHARPEDO
 	dbw 20, STUNFISK
 	end_water_wildmons
 
