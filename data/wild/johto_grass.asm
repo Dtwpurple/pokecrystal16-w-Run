@@ -7,7 +7,7 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, PUMPKAPOO
+	dbw 5, BELDUM
 	dbw 3, RATTATA
 	dbw 6, RATTATA
 	dbw 4, RATTATA_A
@@ -15,7 +15,7 @@ JohtoGrassWildMons:
 	; day
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, PUMPKAPOO
+	dbw 5, BELDUM
 	dbw 3, RATTATA
 	dbw 6, RATTATA
 	dbw 4, RATTATA_A
@@ -23,10 +23,10 @@ JohtoGrassWildMons:
 	; nite
 	dbw 3, GASTLY
 	dbw 4, CHINGLING
-	dbw 5, PUMPKAPOO
+	dbw 5, BELDUM
 	dbw 3, RATTATA_A
 	dbw 6, PHANTUMP
-	dbw 4, HONEDGE
+	dbw 4, DUSKULL
 	dbw 5, GASTLY
 	end_grass_wildmons
 
@@ -1277,12 +1277,12 @@ JohtoGrassWildMons:
 	dbw 3, CATERPIE
 	dbw 3, WEEDLE
 	dbw 4, SHINX
-	dbw 3, PIKIPEK
+	dbw 3, SOLOSIS
 	dbw 4, LOTAD
 	dbw 4, ODDISH
 	; nite
 	dbw 4, MOIBELLE
-	dbw 3, PIKIPEK
+	dbw 3, SOLOSIS
 	dbw 4, CUTIEFLY
 	dbw 4, SHINX
 	dbw 3, LOTAD
