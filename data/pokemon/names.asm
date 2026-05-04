@@ -404,9 +404,9 @@ PokemonNames::
 	db "BAGON@@@@@"  ; BAGON
 	db "SHELGON@@@"  ; SHELGON
 	db "SALAMENCE@"  ; SALAMENCE
-	; db "BELDUM@@@@"; 
-	; db "METANG@@@@"; 
-	; db "METAGROSS@"; 
+	db "BELDUM@@@@"  ; BELDUM
+	db "METANG@@@@"  ; METANG
+	db "METAGROSS@"  ; METAGROSS
 	; db "REGIROCK@@"; 
 	; db "REGICE@@@@"; 
 	; db "REGISTEEL@"; 
