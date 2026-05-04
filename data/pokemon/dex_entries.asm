@@ -448,9 +448,9 @@ GorebyssPokedexEntry::           INCLUDE "data/pokemon/dex_entries/gorebyss.asm"
 LuvdiscPokedexEntry::            INCLUDE "data/pokemon/dex_entries/luvdisc.asm"
 BagonPokedexEntry::              INCLUDE "data/pokemon/dex_entries/bagon.asm"
 ShelgonPokedexEntry::            INCLUDE "data/pokemon/dex_entries/shelgon.asm"
-; BeldumPokedexEntry::             INCLUDE "data/pokemon/dex_entries/beldum.asm"
-; MetangPokedexEntry::             INCLUDE "data/pokemon/dex_entries/metang.asm"
-; MetagrossPokedexEntry::          INCLUDE "data/pokemon/dex_entries/metagross.asm"
+BeldumPokedexEntry::             INCLUDE "data/pokemon/dex_entries/beldum.asm"
+MetangPokedexEntry::             INCLUDE "data/pokemon/dex_entries/metang.asm"
+MetagrossPokedexEntry::          INCLUDE "data/pokemon/dex_entries/metagross.asm"
 ; RegirockPokedexEntry::           INCLUDE "data/pokemon/dex_entries/regirock.asm"
 
 
