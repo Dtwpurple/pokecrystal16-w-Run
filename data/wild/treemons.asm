@@ -126,7 +126,7 @@ TreeMonSet_Forest: ; Ilex Forest
 	dbbw  1, 10, MUNCHLAX
 	db -1
 ; rare
-	dbbw 24, 15, HOOTHOOT
+	dbbw 24, 15, APPLIN
 	dbbw 15, 15, SHROOMISH
 	dbbw 20, 15, PINECO
 	dbbw 10, 15, METAPOD
