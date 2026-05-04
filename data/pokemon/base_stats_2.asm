@@ -109,9 +109,9 @@ INCLUDE "data/pokemon/base_stats/luvdisc.asm"     ; LUVDISC
 INCLUDE "data/pokemon/base_stats/bagon.asm"       ; BAGON
 INCLUDE "data/pokemon/base_stats/shelgon.asm"     ; SHELGON
 INCLUDE "data/pokemon/base_stats/salamence.asm"   ; SALAMENCE
-; INCLUDE "data/pokemon/base_stats/beldum.asm"    ; 
-; INCLUDE "data/pokemon/base_stats/metang.asm"    ; 
-; INCLUDE "data/pokemon/base_stats/metagross.asm" ; 
+INCLUDE "data/pokemon/base_stats/beldum.asm"    ; 
+INCLUDE "data/pokemon/base_stats/metang.asm"    ; 
+INCLUDE "data/pokemon/base_stats/metagross.asm" ; 
 ; INCLUDE "data/pokemon/base_stats/regirock.asm"  ; 
 ; INCLUDE "data/pokemon/base_stats/regice.asm"    ; 
 ; INCLUDE "data/pokemon/base_stats/registeel.asm" ; 
