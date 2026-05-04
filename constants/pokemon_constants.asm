@@ -416,6 +416,9 @@ JOHTO_POKEMON EQU const_value
 	const BAGON
 	const SHELGON
 	const SALAMENCE
+	const BELDUM
+	const METANG
+	const METAGROSS
 	; const REGIROCK
 	; const REGICE
 	; const REGISTEEL
@@ -852,9 +855,6 @@ HISUI_POKEMON EQU const_value
 	const TATSUGIRI
 	const CLODSIRE
 	const FARIGIRAF
-	const BELDUM
-	const METANG
-	const METAGROSS
 	; const WO_CHIEN
 NUM_POKEMON EQU const_value + -1
 
