@@ -129,7 +129,7 @@ IconPointers:
 	dw SnoruntIcon
 	dw TyruntIcon
 	dw ShelgonIcon
-	; dw MetangIcon
+	dw MetangIcon
 	; dw RegiIcon
 	dw LatiasIcon
 	; dw KyogreIcon
