@@ -1241,7 +1241,7 @@ JohtoGrassWildMons:
 	dbw 3, CUTIEFLY
 	dbw 2, ZIGZAGOON
 	dbw 3, SENTRET
-	dbw 3, LECHONK
+	dbw 3, PORYGON
 	dbw 3, RALTS
 	dbw 3, BUDEW
 	; day
