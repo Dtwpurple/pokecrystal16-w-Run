@@ -828,12 +828,12 @@ INCBIN "gfx/pokemon/shelgon/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/shelgon/shiny.pal"
 INCBIN "gfx/pokemon/salamence/front.gbcpal", middle_colors
 INCLUDE "gfx/pokemon/salamence/shiny.pal"
-; INCBIN "gfx/pokemon/beldum/front.gbcpal", middle_colors
-; INCLUDE "gfx/pokemon/beldum/shiny.pal"
-; INCBIN "gfx/pokemon/metang/front.gbcpal", middle_colors
-; INCLUDE "gfx/pokemon/metang/shiny.pal"
-; INCBIN "gfx/pokemon/metagross/front.gbcpal", middle_colors
-; INCLUDE "gfx/pokemon/metagross/shiny.pal"
+INCBIN "gfx/pokemon/beldum/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/beldum/shiny.pal"
+INCBIN "gfx/pokemon/metang/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/metang/shiny.pal"
+INCBIN "gfx/pokemon/metagross/front.gbcpal", middle_colors
+INCLUDE "gfx/pokemon/metagross/shiny.pal"
 ; INCBIN "gfx/pokemon/regirock/front.gbcpal", middle_colors
 ; INCLUDE "gfx/pokemon/regirock/shiny.pal"
 ; INCBIN "gfx/pokemon/regice/front.gbcpal", middle_colors
