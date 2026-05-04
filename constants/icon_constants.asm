@@ -128,7 +128,7 @@
 	const ICON_SNORUNT
 	const ICON_TYRUNT
 	const ICON_SHELGON
-	; const ICON_METANG
+	const ICON_METANG
 	; const ICON_REGI
 	const ICON_LATIAS
 	; const ICON_KYOGRE
