@@ -1321,7 +1321,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons ROUTE_32
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	dbw 4, EKANS
+	dbw 4, PICHU
 	dbw 5, BIDOOF
 	dbw 7, TANGEL
 	dbw 6, MAREEP
@@ -1329,7 +1329,7 @@ JohtoGrassWildMons:
 	dbw 6, RALTS
 	dbw 7, COTTONEE
 	; day
-	dbw 4, EKANS
+	dbw 4, PICHU
 	dbw 5, BIDOOF
 	dbw 7, TANGEL
 	dbw 6, MAREEP
@@ -1337,12 +1337,12 @@ JohtoGrassWildMons:
 	dbw 6, RALTS
 	dbw 7, COTTONEE
 	; nite
-	dbw 4, WOOPER
+	dbw 4, PICHU
 	dbw 5, NICKIT
 	dbw 7, TANGEL
 	dbw 6, ZUBAT
 	dbw 7, HOOTHOOT
-	dbw 7, GASTLY
+	dbw 7, WOOPER
 	dbw 7, GASTLY
 	end_grass_wildmons
 
