@@ -181,7 +181,7 @@ TreeMonSet_BeachRock: ; Route 40, Cianwood City
 	dbbw 30, 20, DWEBBLE
 	dbbw 30, 20, BINACLE
 	dbbw 9, 20, SHUCKLE
-    dbbw 1, 18, ROLYCOLY
+    dbbw 1, 18, ARON
 	db -1
 
 TreeMonSet_KantoRock: ; Victory Road
