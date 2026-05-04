@@ -197,8 +197,8 @@ IconPointers:
 	dw GlalieIcon
 	dw SphealIcon
 	dw SalamenceIcon
-	; dw BeldumIcon
-	; dw MetagrossIcon
+	dw BeldumIcon
+	dw MetagrossIcon
 	dw FloatzelIcon
 	dw BronzongIcon
 	dw TogekissIcon
