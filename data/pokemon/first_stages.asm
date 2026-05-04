@@ -398,9 +398,9 @@ FirstEvoStages::
 	dw BAGON       ; BAGON
 	dw BAGON       ; SHELGON
 	dw BAGON       ; SALAMENCE
-	; dw BELDUM      ; BELDUM
-	; dw BELDUM      ; METANG
-	; dw BELDUM      ; METAGROSS
+	dw BELDUM      ; BELDUM
+	dw BELDUM      ; METANG
+    dw BELDUM      ; METAGROSS
 	; dw REGIROCK    ; REGIROCK
 	; dw REGICE      ; REGICE
 	; dw REGISTEEL   ; REGISTEEL
