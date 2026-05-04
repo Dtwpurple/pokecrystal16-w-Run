@@ -810,12 +810,12 @@ PokemonPicPointers::
 	dba ShelgonBackpic
 	dba SalamenceFrontpic
 	dba SalamenceBackpic
-	; dba BeldumFrontpic
-	; dba BeldumBackpic
-	; dba MetangFrontpic
-	; dba MetangBackpic
-	; dba MetagrossFrontpic
-	; dba MetagrossBackpic
+	dba BeldumFrontpic
+	dba BeldumBackpic
+	dba MetangFrontpic
+	dba MetangBackpic
+	dba MetagrossFrontpic
+	dba MetagrossBackpic
 	; dba RegirockFrontpic
 	; dba RegirockBackpic
 	; dba RegiceFrontpic
