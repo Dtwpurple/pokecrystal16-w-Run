@@ -109,9 +109,9 @@ EvosAttacksPointers3::
 	dw BagonEvosAttacks
 	dw ShelgonEvosAttacks
 	dw SalamenceEvosAttacks
-	; dw BeldumEvosAttacks
-	; dw MetangEvosAttacks
-	; dw MetagrossEvosAttacks
+	dw BeldumEvosAttacks
+	dw MetangEvosAttacks
+	dw MetagrossEvosAttacks
 	; dw RegirockEvosAttacks
 	; dw RegiceEvosAttacks
 	; dw RegisteelEvosAttacks
@@ -2388,49 +2388,49 @@ SalamenceEvosAttacks:
 	dbw 72, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
-; BeldumEvosAttacks:
-	; dbbbw EVOLVE_LEVEL, 20, TR_ANYTIME, METANG
-	; db 0 ; no more evolutions
-	; dbw 1, TAKE_DOWN
-	; db 0 ; no more level-up moves
+BeldumEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 15, TR_ANYTIME, METANG
+	db 0 ; no more evolutions
+	dbw 1, TAKE_DOWN
+	db 0 ; no more level-up moves
 
-; MetangEvosAttacks:
-	; dbbbw EVOLVE_LEVEL, 45, TR_ANYTIME, METAGROSS
-	; db 0 ; no more evolutions
-	; dbw 1, FLASH_CANNON
-	; dbw 1, MAGNET_RISE
-	; dbw 1, TAKE_DOWN
-	; dbw 19, CONFUSION
-	; dbw 19, METAL_CLAW
-	; dbw 25, PURSUIT
-	; dbw 30, BULLET_PUNCH
-	; dbw 35, ZEN_HEADBUTT
-	; dbw 40, SCARY_FACE
-	; dbw 44, PSYCHIC_M
-	; dbw 50, METEOR_MASH
-	; dbw 55, IRON_DEFENSE
-	; dbw 60, AGILITY
-	; dbw 65, HYPER_BEAM
-	; db 0 ; no more level-up moves
+MetangEvosAttacks:
+	dbbbw EVOLVE_LEVEL, 45, TR_ANYTIME, METAGROSS
+	db 0 ; no more evolutions
+	dbw 1, FLASH_CANNON
+	dbw 1, MAGNET_RISE
+	dbw 1, TAKE_DOWN
+	dbw 19, CONFUSION
+	dbw 19, METAL_CLAW
+	dbw 25, PURSUIT
+	dbw 30, BULLET_PUNCH
+	dbw 35, ZEN_HEADBUTT
+	dbw 40, SCARY_FACE
+	dbw 44, PSYCHIC_M
+	dbw 50, METEOR_MASH
+	dbw 55, IRON_DEFENSE
+	dbw 60, AGILITY
+	dbw 65, HYPER_BEAM
+	db 0 ; no more level-up moves
 
 ; MetagrossEvosAttacks:
-	; db 0 ; no more evolutions
-	; dbw 1, FLASH_CANNON
-	; dbw 1, MAGNET_RISE
-	; dbw 1, TAKE_DOWN
-	; dbw 19, CONFUSION
-	; dbw 19, METAL_CLAW
-	; dbw 25, PURSUIT
-	; dbw 30, BULLET_PUNCH
-	; dbw 35, ZEN_HEADBUTT
-	; dbw 40, SCARY_FACE
-	; dbw 44, PSYCHIC_M
-	; dbw 44, HAMMER_ARM
-	; dbw 52, METEOR_MASH
-	; dbw 59, IRON_DEFENSE
-	; dbw 66, AGILITY
-	; dbw 73, HYPER_BEAM
-	; db 0 ; no more level-up moves
+	db 0 ; no more evolutions
+	dbw 1, FLASH_CANNON
+	dbw 1, MAGNET_RISE
+	dbw 1, TAKE_DOWN
+	dbw 19, CONFUSION
+	dbw 19, METAL_CLAW
+	dbw 25, PURSUIT
+	dbw 30, BULLET_PUNCH
+	dbw 35, ZEN_HEADBUTT
+	dbw 40, SCARY_FACE
+	dbw 44, PSYCHIC_M
+	dbw 46, HAMMER_ARM
+	dbw 52, METEOR_MASH
+	dbw 59, IRON_DEFENSE
+	dbw 66, AGILITY
+	dbw 73, HYPER_BEAM
+	db 0 ; no more level-up moves
 
 ; RegirockEvosAttacks:
 	; db 0 ; no more evolutions
