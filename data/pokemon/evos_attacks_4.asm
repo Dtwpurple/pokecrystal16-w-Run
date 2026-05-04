@@ -1162,6 +1162,7 @@ BonslyEvosAttacks:
 
 MimeJrEvosAttacks:
 	dbww EVOLVE_MOVE, MIMIC, MR__MIME
+    dbww EVOLVE_MOVE, ICE_PUNCH, MR__MIME_G
 	db 0 ; no more evolutions
 	dbw 1, POUND
 	dbw 1, BARRIER
