@@ -2413,7 +2413,7 @@ MetangEvosAttacks:
 	dbw 65, HYPER_BEAM
 	db 0 ; no more level-up moves
 
-; MetagrossEvosAttacks:
+MetagrossEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, FLASH_CANNON
 	dbw 1, MAGNET_RISE
