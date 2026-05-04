@@ -305,9 +305,9 @@ NewPokedexOrder:
 	dw MUNNA
 	dw MUSHARNA
 	dw DITTO
-	; dw BELDUM
-	; dw METANG
-	; dw METAGROSS
+	dw BELDUM
+	dw METANG
+	dw METAGROSS
 	dw SNUBBULL
 	dw GRANBULL
 	dw DROWZEE
