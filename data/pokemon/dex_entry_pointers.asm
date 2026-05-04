@@ -399,9 +399,9 @@ PokedexDataPointerTable:
 	dba BagonPokedexEntry
 	dba ShelgonPokedexEntry
 	dba SalamencePokedexEntry
-	; dba BeldumPokedexEntry
-	; dba MetangPokedexEntry
-	; dba MetagrossPokedexEntry
+	dba BeldumPokedexEntry
+	dba MetangPokedexEntry
+	dba MetagrossPokedexEntry
 	; dba RegirockPokedexEntry
 	; dba RegicePokedexEntry
 	; dba RegisteelPokedexEntry
