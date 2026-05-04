@@ -402,9 +402,9 @@ PokemonNumbers::
 	db "371@@" ; BAGON
 	db "372@@" ; SHELGON
 	db "373@@" ; SALAMENCE
-	; db "374@@" ; BELDUM
-	; db "375@@" ; METANG
-	; db "376@@" ; METAGROSS
+	db "374@@" ; BELDUM
+	db "375@@" ; METANG
+	db "376@@" ; METAGROSS
 	; db "377@@" ; REGIROCK
 	; db "378@@" ; REGICE
 	; db "379@@" ; REGISTEEL
