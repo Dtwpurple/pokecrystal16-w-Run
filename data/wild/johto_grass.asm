@@ -7,26 +7,26 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, RATTATA_A
-	dbw 3, RATTATA_A
-	dbw 6, RATTATA_A
+	dbw 5, PUMPKAPOO
+	dbw 3, RATTATA
+	dbw 6, RATTATA
 	dbw 4, RATTATA_A
 	dbw 5, CHINGLING
 	; day
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, RATTATA_A
-	dbw 3, RATTATA_A
-	dbw 6, RATTATA_A
+	dbw 5, PUMPKAPOO
+	dbw 3, RATTATA
+	dbw 6, RATTATA
 	dbw 4, RATTATA_A
 	dbw 5, CHINGLING
 	; nite
 	dbw 3, GASTLY
 	dbw 4, CHINGLING
-	dbw 5, GASTLY
+	dbw 5, PUMPKAPOO
 	dbw 3, RATTATA_A
-	dbw 6, GASTLY
-	dbw 4, GASTLY
+	dbw 6, PHANTUMP
+	dbw 4, HONEDGE
 	dbw 5, GASTLY
 	end_grass_wildmons
 
@@ -35,16 +35,16 @@ JohtoGrassWildMons:
 	; morn
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, RATTATA_A
-	dbw 3, RATTATA_A
+	dbw 5, ROWLET
+	dbw 3, ROWLET
 	dbw 6, RATTATA_A
 	dbw 4, RATTATA_A
 	dbw 5, CHINGLING
 	; day
 	dbw 3, RATTATA_A
 	dbw 4, CHINGLING
-	dbw 5, RATTATA_A
-	dbw 3, RATTATA_A
+	dbw 5, ROWLET
+	dbw 3, ROWLET
 	dbw 6, RATTATA_A
 	dbw 4, RATTATA_A
 	dbw 5, CHINGLING
@@ -53,7 +53,7 @@ JohtoGrassWildMons:
 	dbw 4, CHINGLING
 	dbw 5, GASTLY
 	dbw 3, RATTATA_A
-	dbw 6, GASTLY
+	dbw 6, ROWLET
 	dbw 4, GASTLY
 	dbw 5, GASTLY
 	end_grass_wildmons
@@ -1238,27 +1238,27 @@ JohtoGrassWildMons:
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	dbw 2, FLETCHLING
-	dbw 3, FLETCHLING
-	dbw 2, SENTRET
+	dbw 3, CUTIEFLY
+	dbw 2, ZIGZAGOON
 	dbw 3, SENTRET
-	dbw 3, SENTRET
-	dbw 3, PURRLOIN
+	dbw 3, LECHONK
+	dbw 3, RALTS
 	dbw 3, BUDEW
 	; day
 	dbw 2, FLETCHLING
-	dbw 2, FLETCHLING
+	dbw 2, CUTIEFLY
 	dbw 3, SENTRET
-	dbw 3, SENTRET
-	dbw 2, SENTRET
+	dbw 3, GOSSIFLEUR
+	dbw 2, ZIGZAGOON
 	dbw 3, PURRLOIN
-	dbw 3, BUDEW
+	dbw 3, ODDISH
 	; nite
 	dbw 2, HOOTHOOT
-	dbw 2, HOOTHOOT
+	dbw 2, MORELULL
 	dbw 3, AZURILL
-	dbw 3, AZURILL
-	dbw 2, AZURILL
-	dbw 3, PURRLOIN
+	dbw 3, ZIGZAGOON_G
+	dbw 2, EEVEE
+	dbw 3, MIME_JR
 	dbw 5, MEW
 	end_grass_wildmons
 
@@ -1271,19 +1271,19 @@ JohtoGrassWildMons:
 	dbw 4, SHINX
 	dbw 3, BUDEW
 	dbw 4, LOTAD
-	dbw 4, BUDEW
+	dbw 4, ODDISH
 	; day
 	dbw 4, MEOWSY
 	dbw 3, CATERPIE
 	dbw 3, WEEDLE
 	dbw 4, SHINX
-	dbw 3, LOTAD
+	dbw 3, PIKIPEK
 	dbw 4, LOTAD
-	dbw 4, BUDEW
+	dbw 4, ODDISH
 	; nite
 	dbw 4, MOIBELLE
-	dbw 3, HOOTHOOT
-	dbw 4, HOOTHOOT
+	dbw 3, PIKIPEK
+	dbw 4, CUTIEFLY
 	dbw 4, SHINX
 	dbw 3, LOTAD
 	dbw 4, LOTAD
