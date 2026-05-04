@@ -416,9 +416,9 @@ JOHTO_POKEMON EQU const_value
 	const BAGON
 	const SHELGON
 	const SALAMENCE
-	; const BELDUM
-	; const METANG
-	; const METAGROSS
+	const BELDUM
+	const METANG
+	const METAGROSS
 	; const REGIROCK
 	; const REGICE
 	; const REGISTEEL
