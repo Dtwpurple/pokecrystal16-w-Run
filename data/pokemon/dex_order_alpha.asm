@@ -56,7 +56,7 @@ AlphabeticalPokedexOrder:
 	dw BEARTIC
 	dw BEEDRILL
 	dw BEHEEYEM
-	; dw BELDUM
+	dw BELDUM
 	dw BELLIBOLT
 	dw BELLOSSOM
 	dw BELLSPROUT
@@ -455,8 +455,8 @@ AlphabeticalPokedexOrder:
 	dw MEOWTH_A
 	dw MEOWTH_G
 	; dw MESPRIT
-	; dw METAGROSS
-	; dw METANG
+	dw METAGROSS
+	dw METANG
 	dw METAPOD
 	dw MEW
 	dw MEWTWO
