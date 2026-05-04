@@ -109,9 +109,9 @@ EvolutionMovePointers3::
 	dw NoEvolutionMoves3        ; BAGON
 	dw ShelgonEvolutionMoves    ; SHELGON
 	dw SalamenceEvolutionMoves  ; SALAMENCE
-	; dw NoEvolutionMoves3        ; BELDUM
-	; dw MetangEvolutionMoves     ; METANG
-	; dw MetagrossEvolutionMoves  ; METAGROSS
+	dw NoEvolutionMoves3        ; BELDUM
+	dw MetangEvolutionMoves     ; METANG
+	dw MetagrossEvolutionMoves  ; METAGROSS
 	; dw NoEvolutionMoves3        ; REGIROCK
 	; dw NoEvolutionMoves3        ; REGICE
 	; dw NoEvolutionMoves3        ; REGISTEEL
